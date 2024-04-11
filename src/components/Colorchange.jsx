@@ -11,8 +11,8 @@ const Colorchange = () => {
   const [rotation, setRotation] = useState("rotate-[0deg]"); // Initial rotation of 0 degrees
   const colors = ['primary-beige', 'primary-green', 'primary-red', 'primary-orange'];
   const cafes = ['Southern Stories', 'Quench', 'Maggi Hotspot', 'Chai OK'];
-  const photos = ["assets/Italian.png", "assets/south.png", "assets/salad.png", "assets/mexican.png"];
-  const [photo, setPhoto] = useState("assets/Italian.png");
+  const photos = ["./src/assets/Italian.png", "./src/assets/south.png", "./src/assets/salad.png", "./src/assets/mexican.png"];
+  const [photo, setPhoto] = useState("./src/assets/Italian.png");
   const handleClick = (direction) => {
     const nextIndex = (colorIndex + 1) % colors.length;
     setColorIndex(nextIndex);
@@ -33,7 +33,7 @@ const Colorchange = () => {
     <div className='overflow-hidden'>
       <nav className='mt-8 flex justify-between items-center w-[80%] mx-auto'>
         <div className='flex justify-between items-center gap-4'>
-          <img src="assets/logo.png" className='w-12 border-2 border-red-900 rounded-2xl' />
+          <img src="./src/assets/logo.png" className='w-12 border-2 border-red-900 rounded-2xl' />
           <div className='font-Poppins font-semibold text-2xl text-center'>
             Q-Buster
           </div>
@@ -94,7 +94,7 @@ const Colorchange = () => {
         <div className="right w-[50%]">
           <div className={`${bgColor} w-[160vh] h-[160vh] rounded-full absolute -top-[85vh] -right-[22vh] -z-20 flex flex-end items-end overflow-hidden`}>
             <img
-              src="assets/rounded-food.png"
+              src="./src/assets/rounded-food.png"
               alt=""
               className={`${rotation} w-[70%] relative -bottom-[30%] -right-[15%] duration-500`}
             />
@@ -106,14 +106,14 @@ const Colorchange = () => {
           <div className='mt-[53vh] text-center mr-[24vh] flex justify-center items-center'>
             <img
               onClick={() => handleClick("anti-clockwise")}
-              src="assets/spoon.png"
+              src="./src/assets/spoon.png"
               alt=""
               className='-mr-2 drop-shadow-lg cursor-pointer hover:rotate-12 transition-transform duration-300'
             />
             <span className={`${bgColor} pt-2 pb-2 pl-28 pr-28 rounded-full h-fit font-light z-10`}>{cafe}</span>
             <img
               onClick={() => handleClick("clockwise")}
-              src="assets/spoon-2.png"
+              src="./src/assets/spoon-2.png"
               alt=""
               className='-ml-2 drop-shadow-lg cursor-pointer hover:rotate-12 transition-transform duration-300'
             />
